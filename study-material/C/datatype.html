@@ -1,0 +1,126 @@
+<html>
+<head><title>Data type</title>
+<link rel="stylesheet" type="text/css" href="main_body.css"/>
+</head>
+<body>
+<h1>Data Types</h1>
+<p id="main">
+C supports the following basic data types: <br>
+<span style="color:#9999ff"><b>int</b></span>:<span style="color:#9999ff"><b> integer</b></span>, a whole number.<br>
+<span style="color:#9999ff"><b>float</b></span>: floating point, a number with a fractional part.<br>
+<span style="color:#9999ff"><b>double</b></span>: double-precision floating point value.<br>
+<span style="color:#9999ff"><b>char</b></span>: single character.<br><br>
+The amount of storage required for each of these types varies by platform. 
+C has a built-in <span style="color:#9999ff"><b>sizeof</b></span> operator that gives the memory requirements for a particular data type.
+<b>For example:</b> 
+<p id="eg"><br>
+#include < stdio.h ><br>
+
+int main() {<br>
+  printf("int: %d \n", <b>sizeof(int)</b>);<br>
+  printf("float: %d \n", <b>sizeof(float)</b>);<br>
+  printf("double: %d \n", <b>sizeof(double)</b>);<br>
+  printf("char: %d \n", <b>sizeof(char)</b>);<br>
+  return 0;<br>
+}<br><br>
+</p>
+<p id="main">
+The program output displays the corresponding size in 
+bytes for each data type.<br>
+The <span style="color:#9999ff">printf</span> statements in this program have two <b>arguments</b>.
+ The first is the output <span style="color:#9999ff">string</span> with a <b>format specifier (%d)</b>, while the next <span style="color:#9999ff">argument</span> returns the <span style="color:#9999ff">sizeof </span>value. In the final output, the <b>%d</b> (for decimal) is replaced by the value in the second <b>argument</b>. 
+</p>
+<p id="note">
+Note that C does not have a boolean type.<br>
+
+A <b>printf</b> statement can have multiple format specifiers with corresponding arguments to replace the specifiers. Format specifiers are also referred to as conversion specifiers. 
+We will learn more about format specifiers in the upcoming lessons.
+</p>
+<h1>Variables</h1>
+<p id="main">
+A variable is a name for an area in memory.<br>
+The name of a variable (also called the <b>identifier</b>) must begin with either a letter or an underscore and can be composed of letters, digits, and the underscore <span style="color:9999ff">character</span>. 
+Variable naming conventions differ, however using lowercase letters with an underscore to separate words is common (snake_case). 
+Variables must also be declared as a data type before they are used.
+<br><br>
+The value for a declared variable is changed with an <b>assignment statement</b>. 
+For example, the following statements declare an <span style="color:#9999ff">integer</span> variable <b>my_var</b> and then assigns it the value 42: 
+</p>
+<p id="eg">
+<b>int</b> my_var;<br>
+my_var=42;<br><br>
+</p>
+<p id="main">
+You can also declare and <b>initialize</b> (assign an initial value) a variable in a single statement: 
+</p>
+<p id="eg">
+<b>int</b> my_var=42;<br><br>
+</p>
+<p id="main">
+Let's define variables of different types, do a simple math operation, and output the results: 
+</p>
+<p id="eg">
+#include < stdio.h ><br>
+
+int main() {<br>
+  int a, b;<br>
+  float salary = 56.23;<br>
+  char letter = 'Z';<br>
+  a = 8;<br>
+  b = 34;<br>
+  int c = a+b;<br>
+
+  printf("%d \n", c);<br>
+  printf("%f \n", salary);<br>
+  printf("%c \n", letter);<br>
+
+  return 0;<br>
+}<br><br>
+</p><br>
+<h1>Constants</h1>
+<p id="main">
+A <b>constant</b> stores a value that cannot be changed from its initial assignment. 
+By using constants with meaningful names, code is easier to read and understand. 
+To distinguish constants from variables, a common practice is to use uppercase identifiers.<br>
+
+One way to define a constant is by using the const keyword in a variable declaration:
+</p>
+<p id="eg">
+#include < stdio.h ><br>
+int main() {<br>
+  const double PI = 3.14;<br>
+  printf("%f", PI);<br>
+  return 0;<br>
+}<br><br>
+</p>
+<p id="main">
+The value of PI cannot be changed during program execution. 
+For example, another assignment statement, such as PI = 3.141 will generate an error.
+</p>
+<p id="note">
+Constants must be initialized with a value when declared.
+</p>
+<p id="main">
+Another way to define a constant is with the <b>#define</b> preprocessor directive.
+The <b>#define</b> directive uses macros for defining constant values.
+<b>For example:</b>
+</p>
+<p id="eg">
+#include < stdio.h ><br>
+#define PI 3.14<br>
+int main() {<br>
+  printf("%f", PI);<br>
+  return 0;<br>
+}<br><br>
+</p>
+<p id="mian">
+Before compilation, the preprocessor replaces every macro identifier in the code with its corresponding value from the directive. In this case, every occurrence of PI is replaced with 3.14.
+The final code sent to the compiler will already have the constant values in place.<br><br>
+The difference between <b>const</b> and <b>#define</b> is that the former uses memory for storage and the latter does not.
+</p>
+<p id="note">
+Do NOT put a semicolon <span style="text-decoration:underline">character</span> at the end of <b>#define</b> statements. This is a common mistake.
+We will learn more about <b>preprocessor directives</b> in the next modules.
+</p>
+</body>
+</html>

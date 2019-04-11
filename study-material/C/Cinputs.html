@@ -1,0 +1,79 @@
+<html>
+<head><title>Inputs and Outputs</title>
+<link rel="stylesheet" type="text/css" href="main_body.css">
+</link></head>
+<body>
+<h1>Inputs</h1>
+<p id="main">
+C supports a number of ways for taking user inputs.<br>
+<b>getchar()</b> Returns the value of the next single <span style="color:#9999ff">
+character</span> input.<br>
+<b>for example:</b>
+</p>
+<p id="eg">
+#include < stdio.h ><br>
+int main() {<br>
+  char a = getchar();<br>
+  printf("You entered: %c", a);<br>
+  return 0;<br>
+}<br><br>
+</p>
+<p id="main">
+Here we stored the input in an array of 100 characters.<br>
+<span style="color:#9999ff">scanf()</span> scans input that matches format specifiers.<br>
+<b>For example:</b>
+</p>
+<p id="eg">
+#include < stdio.h ><br>
+int main() {<br>
+  int a;<br>
+  scanf("%d", &a);<br>
+  printf("You entered: %d", a);<br>
+  return 0;<br>
+}<br><br>
+</p>
+<p id="main">
+The <b>&</b> sign before the variable name is the <b>address operator</b>. It gives the address, or location in memory, of a variable. This is needed because <span style="color:#9999ff">scanf</span> places an input value at a variable address<br><br>
+As another example, let's prompt for two integer inputs and output their sum:
+</p>
+<p id="eg">
+#include < stdio.h ><br>
+int main() {<br>
+  int a, b;<br>
+  printf("Enter two numbers:");<br>
+  scanf("%d %d", &a, &b);<br>
+  printf("\nSum: %d", a+b);<br>
+  return 0;<br>
+}<br><br>
+</p>
+<p id="main">
+We have already used the<span style="color:#9999ff"> printf()</span> function to generate output in the previous lessons. In this lesson, we cover several other functions that can be used for output.
+<b>putchar()</b> Outputs a single<span style="color:#9999ff"> character.</span><br>
+</p>
+<p id="eg">
+#include < stdio.h ><br>
+int main() {<br>
+  char a = getchar();<br>
+  printf("You entered: ");<br>
+  putchar(a);<br>
+  return 0;<br>
+} <br><br>
+</p>
+<p id="main">
+The input is stored in the variable <b>a</b>.<br>
+The <b>puts()</b> function is used to display output as a <span style="color:#9999ff">string</span>.<br>
+A <span style="color:#9999ff">string</span> is stored in a <span style="color:#9999ff">char Array</span>.
+</p>
+<p id="eg">
+#include < stdio.h ><br>
+int main() {<br>
+  char a[100];<br>
+  gets(a); <br>
+  printf("You entered: ");<br>
+  puts(a); <br>
+  return 0;<br>
+}<br><br>
+</p>
+
+</body>
+</html>

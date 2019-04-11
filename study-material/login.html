@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>MART</title>
+<style>
+body
+{
+   background-image:url("pink.jpg");
+}
+#submit
+{
+  background-color: #4CAF50 ;
+  font-color:"white";
+  font-size:20;
+  width:310;
+  height:35;
+ border-radius:12px;
+ border: 0px;
+}
+#submit:hover
+{
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+<form name="myframe" onSubmit="login();"  action="">
+<center><b><font size="50"><h1>DAILY_NEED</h1></font></b></center>
+<table width="25%" align="center">
+<tr><td colspan="2"><center><b><font size="25">LOGIN</b></center></td></tr>
+<tr><td><font size="5"><b>User ID:</td><td> <input type="text" name="userid"></td><tr>
+<tr><td><font size="5"><b>Password: </td><td> <input type="password" name="pass" ></td></tr>
+<tr><td colspan="2"><input type="submit" id="submit" value="login" ></font></td></tr>
+</table>
+</form>
+<script type="text/javascript">
+function login()
+{
+    
+     if(document.myframe.userid.value=="administrator" && document.myframe.pass.value=="administrator")
+         {
+             document.myframe.action="notes.html";
+         }
+    else{alert("invalid UserId or Password");}
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+<head><title>C</title>
+<link rel="stylesheet" type="text/css" href="navi.css">
+<link rel="stylesheet" type="text/css" href="main_body.css">
+<style>
+.rotation
+{transform: scaleX(-1);}
+transform: scaleY(-1);
+</style>
+</head>
+<body>
+<ul>
+	<li id="0" onclick="func(this)">what is C?</li>
+	<li id="1" onclick="func(this)">Hello, World!</li>
+	<li id="2" onclick="func(this)">Data Types</li>
+	<li id="3" onclick="func(this)">Input & Output</li>
+	<li id="4" onclick="func(this)">Comments</li>
+	<li>Operators</li>
+</ul>
+<div id="first">
+<img class=rotation align="left" src="background.png " width="30% " height="80%">
+<spam style="font-size:80px"><b>LET'S START</b></spam>
+<img align="right" src="background.png " width="30% " height="80%">
+</div>
+
+<script>
+function func(a)
+{
+var x=document.getElementById('first');
+x.style.display='block';
+switch(a.id)
+{
+case '0':
+a.style.color='white';
+a.style.background='pink';
+document.getElementById('first').innerHTML='<object type=text/html data="whatisc.html" width="100%" height="100%"></object>';
+break;
+case '1':
+a.style.color='white';
+a.style.background='pink';
+document.getElementById('first').innerHTML='<object type=text/html data="helloworld.html" width="100%" height="100%"></object>';
+break;
+case '2':
+a.style.color='white';
+a.style.background='pink';
+document.getElementById('first').innerHTML='<object type=text/html data="datatype.html" width="100%" height="100%"></object>';
+break;
+case '3':
+a.style.color='white';
+a.style.background='pink';
+document.getElementById('first').innerHTML='<object type=text/html data="Cinputs.html" width="100%" height="100%"></object>';
+break;
+case '4':
+break;
+case '5':
+break;
+case '6':
+break;
+case '7':
+break;
+case '8':
+break;
+case '9':
+break;
+default: break;
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+#main
+{
+font-size:25px;
+padding-left:5px;
+}
+#note
+{
+background-color:#7DCEA0;
+border-left:11px solid #27AE60;
+padding-left:5px;
+font-size:20px;
+}
+#eg
+{
+background-color:lightgrey;
+border-left: 13px solid green;
+padding-left:5px;
+}

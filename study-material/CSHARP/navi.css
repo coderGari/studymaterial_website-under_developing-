@@ -1,0 +1,31 @@
+ul
+{
+border:1px solid;
+background-color:#D7BDE2;
+margin:0px;
+padding:0px;
+width:170px;
+height:100%;
+overflow:auto;
+position:absolute;
+}
+li
+{
+color:black;
+display:block;
+list-style-type:none;
+text-align:left;
+padding:5px;
+border-bottom:1px solid;
+cursor:pointer;
+}
+
+li:hover
+{
+background-color:#F2F3F4;
+}
+#first
+{
+display:none;
+margin:0px 0px 0px 180px;
+}
